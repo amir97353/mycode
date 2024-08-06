@@ -67,52 +67,52 @@ def bender_type():
             print("Invalid Input")
             continue
 
-        bender_scores = {"Fire": 0, "Water": 0, "Air": 0, "Earth": 0}
-        
-        # Brackets are used to refernce the value of a dictionary 
-        if personality[personality_input] == "Fire":
-            bender_scores["Fire"] += 1
-        elif personality[personality_input] == "Water":
+    bender_scores = {"Fire": 0, "Water": 0, "Air": 0, "Earth": 0}
+    
+    # Brackets are used to refernce the value of a dictionary 
+    if personality[personality_input] == "Fire":
+        bender_scores["Fire"] += 1
+    elif personality[personality_input] == "Water":
+        bender_scores["Water"] += 1
+    elif personality[personality_input] == "Air":
+        bender_scores["Air"] += 1
+    elif personality[personality_input] == "Earth":
+        bender_scores["Earth"] += 1
+
+    # We're using brcakets here also to add to the values of the dictionaries
+    if conflict[conflict_input] == "Fire":
+        bender_scores["Fire"] += 1
+    elif conflict[conflict_input] == "Water":
+        bender_scores["Water"] += 1
+    elif conflict[conflict_input] == "Air":
+        bender_scores["Air"] += 1
+    elif conflict[conflict_input] == "Earth":
+        bender_scores["Earth"] += 1
+
+
+    # Checks for the value from the dictionary motivation
+    if motivation[motivation_input] == "Fire":
+        bender_scores["Fire"] += 1
+    elif motivation[motivation_input] == "Water":
+        bender_scores["Water"] += 1
+    elif motivation[motivation_input] == "Air":
+        bender_scores["Air"] += 1
+    elif motivation[motivation_input] == "Earth":
+        bender_scores["Earth"] += 1
+
+
+    # Checks for the value from the dictionary value_in_others 
+    if value_in_others[value_input] == "Fire":
+        bender_scores["Fire"] += 1
+    elif value_in_others[value_input] == "Water":
             bender_scores["Water"] += 1
-        elif personality[personality_input] == "Air":
-            bender_scores["Air"] += 1
-        elif personality[personality_input] == "Earth":
-            bender_scores["Earth"] += 1
+    elif value_in_others[value_input] == "Air":
+        bender_scores["Air"] += 1
+    elif value_in_others[value_input] == "Earth":
+        bender_scores["Earth"] += 1
 
-        # We're using brcakets here also to add to the values of the dictionaries
-        if conflict[conflict_input] == "Fire":
-            bender_scores["Fire"] += 1
-        elif conflict[conflict_input] == "Water":
-            bender_scores["Water"] += 1
-        elif conflict[conflict_input] == "Air":
-            bender_scores["Air"] += 1
-        elif conflict[conflict_input] == "Earth":
-            bender_scores["Earth"] += 1
-
-
-        # Checks for the value from the dictionary motivation
-        if motivation[motivation_input] == "Fire":
-            bender_scores["Fire"] += 1
-        elif motivation[motivation_input] == "Water":
-            bender_scores["Water"] += 1
-        elif motivation[motivation_input] == "Air":
-            bender_scores["Air"] += 1
-        elif motivation[motivation_input] == "Earth":
-            bender_scores["Earth"] += 1
-
-
-        # Checks for the value from the dictionary value_in_others 
-        if value_in_others[value_input] == "Fire":
-            bender_scores["Fire"] += 1
-        elif value_in_others[value_input] == "Water":
-             bender_scores["Water"] += 1
-        elif value_in_others[value_input] == "Air":
-            bender_scores["Air"] += 1
-        elif value_in_others[value_input] == "Earth":
-            bender_scores["Earth"] += 1
-
-        # max when used with a dictionary is used to find the key with the highest value
-        # max iterrates through the dictionary and using key=bender_scores.get to get the values and returns the highest value.
-        bender_style = max(bender_scores, key=bender_scores.get)
-        
-        print("Congrajulations You are a " + bender_style + "Bender" )
+    # max when used with a dictionary is used to find the key with the highest value
+    # max iterrates through the dictionary and using key=bender_scores.get to get the values and returns the highest value.
+    bender_style = max(bender_scores, key=bender_scores.get)
+    
+    print("Congrajulations You are a " + bender_style + "Bender" )
