@@ -42,15 +42,15 @@ def bender_type():
     }
     while True: 
         # the below ask for the users inpput and uses strip to get rid of whitespace and makes it lower case because the keys to the dictionaries are also lower case
-        personality_input = input(" What best describes your  peronality type? passionate,adaptable,peaceful,stubbborn").strip().lower()
+        personality_input = input(" What best describes your  peronality type? passionate,adaptable,peaceful,stubbborn    ").strip().lower()
 
-        conflict_input = input("What best describes how you handle conflict? head-on,peacefully,adapt,stand-firm").strip().lower()
+        conflict_input = input("What best describes how you handle conflict? head-on,peacefully,adapt,stand-firm    ").strip().lower()
 
-        motivation_input = input("What best describes what motivates you? achieving goals, helping others,exploring, stability").strip().lower()
+        motivation_input = input("What best describes what motivates you? achieving goals, helping others,exploring, stability.   ").strip().lower()
 
-        value_input = input("What best describes the quality you value in others? courage,empathy,creativity,reliability").strip().lower()
+        value_input = input("What best describes the quality you value in others? courage,empathy,creativity,reliability    ").strip().lower()
     
-        problem_input = input(" What best decribes how you solve problems? take action,diplomatically,unique solution,logically").strip().lower()
+        problem_input = input(" What best decribes how you solve problems? take action,diplomatically,unique solution,logically    ").strip().lower()
          
         #  The below code checks if the user input is empty
         if not personality_input or not conflict_input or not motivation_input or not value_input or not problem_input:
@@ -115,4 +115,6 @@ def bender_type():
     # max iterrates through the dictionary and using key=bender_scores.get to get the values and returns the highest value.
     bender_style = max(bender_scores, key=bender_scores.get)
     
-    print("Congrajulations You are a " + bender_style + "Bender" )
+    print("Congratulations You are a " + bender_style + "Bender" )
+
+bender_type()
