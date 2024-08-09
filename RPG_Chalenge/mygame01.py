@@ -37,6 +37,11 @@ health = 3
 
 # a dictionary linking a room to other rooms
 rooms = {
+    'Library' : {
+          'south' : 'Kitchen',
+          'east'  : 'Hall',
+          
+        },
     'Hall' : {
           'south' : 'Kitchen',
           'east'  : 'Dining Room',
@@ -98,6 +103,7 @@ while True:
         print("You have found the book of infinite wisdom in the library. You now have infinite health")
         health = float('inf')
         inventory.append("Book of infinte wisom")
+        print(inventory)
 
     # Check if they type 'get' first
     if move[0] == 'get':
@@ -121,9 +127,10 @@ while True:
         print("You were attacked by a monster you loose one health point")
         if health == 0:
             print('You have no more health a monster has got you... GAME OVER!')
+            break
         else:
             print("You have" + str(health) + "lives left")
-        break
+        
 
     # Define how a player can win
     if currentRoom == 'Garden' and 'key' in inventory and 'potion' in inventory:
